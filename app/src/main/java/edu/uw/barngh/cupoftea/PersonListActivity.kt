@@ -27,6 +27,7 @@ import com.google.firebase.firestore.SetOptions
 import kotlinx.android.parcel.Parcelize
 import kotlinx.android.synthetic.main.abc_list_menu_item_checkbox.view.*
 import news.uwgin.uw.edu.news.PersonWelcomeFragment
+import java.lang.Exception
 import java.util.Date
 
 /**
@@ -319,6 +320,14 @@ class PersonListActivity : AppCompatActivity() {
                         continue;
                     }
 
+                    var locationVisible = true
+                    locationVisible = try {
+                        document.get("location_visible") as Boolean
+                    } catch (e: Exception) {
+                        true
+                    }
+
+
                     currentUsers.add(
                         User(
                             document.get("first_name").toString(),
@@ -326,7 +335,7 @@ class PersonListActivity : AppCompatActivity() {
                             age,
                             document.get("gender").toString(),
                             document.get("gender_pref").toString(),
-                            document.get("location_visible") as Boolean,
+                            locationVisible as Boolean,
                             document.get("location") as MutableMap<String, Double>,
                             document.get("profile_picture").toString(),
                             document.get("summary").toString(),
