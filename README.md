@@ -6,6 +6,7 @@ Jake Jin, Harry Barng, Liuqing Ma, Wonjo Barng
 [https://uwjake.github.io/timeline](https://uwjake.github.io/timeline)
 
 Or click on:
+
 [![YouTube Demo Video](https://img.youtube.com/vi/3cB3bl6wHlI/0.jpg)](https://www.youtube.com/watch?v=3cB3bl6wHlI)
 
 ## Instruction/User manual ##
